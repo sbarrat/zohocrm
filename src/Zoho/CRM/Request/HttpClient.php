@@ -15,7 +15,7 @@ use Zoho\CRM\Common\HttpClientInterface;
 class HttpClient implements HttpClientInterface
 {
     protected $curl;
-    protected $timeout = 5;
+    protected $timeout = 15;
     protected $retry = 2;
 
     public function __construct()
