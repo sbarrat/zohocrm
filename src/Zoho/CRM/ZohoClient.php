@@ -120,7 +120,7 @@ class ZohoClient
      *                        version   1 (default) - use earlier API implementation
      *                                  2 - use latest API implementation
      * @param array $options Options to add for configurations [optional]
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function convertLead($leadId, $data, $params = array(), $options = array())
     {
@@ -144,7 +144,7 @@ class ZohoClient
      *                        version           Integer 1 (default) - use earlier API implementation
      *                                                   2 - use latest API implementation
      * @param array $options Options to add for configurations [optional]
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function getCVRecords($name, $params = array(), $options = array())
     {
@@ -155,7 +155,7 @@ class ZohoClient
     /**
      * Implements getFields API method.
      *
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function getFields()
     {
@@ -167,7 +167,7 @@ class ZohoClient
      *
      * @param string $id      Id of the record
      *
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function deleteRecords($id)
     {
@@ -186,7 +186,7 @@ class ZohoClient
      *                        version   1 (default) - use earlier API implementation
      *                                  2 - use latest API implementation
      * @param array $options Options to add for configurations [optional]
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function getRecordById($id, $params = array(), $options = array())
     {
@@ -216,7 +216,7 @@ class ZohoClient
      *                        version           Integer    1 (default) - use earlier API implementation
      *                                                  2 - use latest API implementation
      * @param array $options Options to add for configurations [optional]
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function getRecords($params = array(), $options = array())
     {
@@ -241,7 +241,7 @@ class ZohoClient
      *                        version           Integer    1 (default) - use earlier API implementation
      *                                                  2 - use latest API implementation
      * @param array $options Options to add for configurations [optional]
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function getRelatedRecords($params = array(), $options = array())
     {
@@ -264,7 +264,7 @@ class ZohoClient
      *                                version       Integer 1 (default) - use earlier API implementation
      *                                                      2 - use latest API implementation
      *
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function getSearchRecords($searchCondition, $params = array(), $options = array())
     {
@@ -292,7 +292,7 @@ class ZohoClient
      *                                version       Integer 1 (default) - use earlier API implementation
      *                                                      2 - use latest API implementation
      *
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function searchRecords($criteria, $params = array(), $options = array())
     {
@@ -316,7 +316,7 @@ class ZohoClient
      * @param integer $newFormat  1 (default) - exclude fields with null values in the response
      *                            2 - include fields with null values in the response
      *
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function getUsers($type = 'AllUsers', $newFormat = 1)
     {
@@ -378,7 +378,7 @@ class ZohoClient
      *                                                4 - update multiple records in a single API method call
      *
      * @param array $options Options to add for configurations [optional]
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function updateRecords($id, $data, $params = array(), $options = array())
     {
@@ -410,7 +410,7 @@ class ZohoClient
      *                                                2 - use latest API implementation
      *                                                4 - update multiple records in a single API method call
      *
-     * @return Response The Response object
+     * @return Request\Response
      */
     public function uploadFile($id, $content, $params = array())
     {
@@ -452,7 +452,7 @@ class ZohoClient
      * @param string $params Options
      * @param array $data Data to send [optional]
      * @param array $options Options to add for configurations [optional]
-     * @return Response
+     * @return Request\Response
      */
     protected function call($command, $params, $data = array(), $options = array())
     {
