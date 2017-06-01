@@ -346,7 +346,7 @@ class ZohoClient
      *                                                even when duplicate check is turned off.
      *
      * @param array $options Options to add for configurations [optional]
-     * @return Response The Response object
+     * @return Request\Response The Response object
      * @todo
     - Make default value for duplicateCheck configurable
      */
